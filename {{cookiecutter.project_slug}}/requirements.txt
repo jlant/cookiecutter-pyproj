@@ -1,0 +1,5 @@
+cookiecutter
+click
+Sphinx
+nbsphinx
+pytest

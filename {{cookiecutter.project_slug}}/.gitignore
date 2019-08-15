@@ -1,0 +1,13 @@
+# Python byte-complied files
+__pycache__/
+*.py[cod]
+
+# Jupyter notebook checkpoints
+docs/notebooks/.ipynb_checkpoints
+
+# Sphinx documentation
+docs/_build/
+
+# Vim
+*.swp
+*.swo
