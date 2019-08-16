@@ -1,4 +1,4 @@
-AUTHORS
+Authors
 =======
 
 * {{ cookiecutter.author }} <{{ cookiecutter.email }}>
