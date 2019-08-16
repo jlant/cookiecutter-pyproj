@@ -4,9 +4,8 @@
 
 Notes
 -----
-Click is a nice and simple Python package for creating command line
-interfaces.
-Please see click documentation at http://click.pocoo.org/
+Click is a great Python package for creating nice command line interfaces.
+Please see `Click documentation <http://click.pocoo.org/>`_.
 """
 
 import sys
@@ -16,18 +15,21 @@ import {{cookiecutter.project_slug}}
 
 
 @click.command()
-def main(args=None):
-    """Command line interface for {{ cookiecutter.project_slug }}."""
+@click.option("--verbose", is_flag=True, help="Print detailed results from analysis/model")
+def main(verbose):
+    """Command line interface for iris.
 
-    {{cookiecutter.project_slug}}.hello()
+    Run all analysis, models, and/or main script from a command line interface.
+    """
+    click.echo("Running analysis from a Click command line interface")
+    iris.main()
+    click.echo("Click allows you to easily add various commands and options "
+               "as you see fit.")
     click.echo()
-    click.echo("The following are automatically setup to help you get up and "
-               "running on your project quickly:")
-    click.echo("  * A Click command line interface in {{ cookiecutter.project_slug}}.cli.main")
-    click.echo("  * Pytest suite in the `tests` directory.")
-    click.echo("  * Sphinx documentation in the `docs` directory.")
-    click.echo("  * Makefile for easy running of tests and generating project documentation.")
-    click.echo("  * Template README.md file.")
+
+    if verbose:
+        click.echo("Verbose mode is on.")
+        click.echo("Can print more detailed results from your analysis/model.")
 
     return 0
 

@@ -7,7 +7,8 @@
 Features
 --------
 
-* Simple, clear, and structured Python_ project template
+* Simple, clear, and structured Python_ project template for data science projects
+* Promotes `Best Practices in Scientific Computing`_
 * Initial Jupyter_ set up for data exploration
 * Code testing set up with pytest_
 * Initial project and code documentation website set up with Sphinx_
@@ -66,7 +67,11 @@ The followings is a sample project layout along with a description of all the co
 Example
 -------
 The following is an example of a typical Data Scientist creating a cookiecutter-pyproj_ template for a
-machine learning project using the `Iris flower data set`_ in just 2 steps.
+machine learning project using the `Iris flower data set`_ and exploring the features provided in
+the template project.
+
+Creating a project
+~~~~~~~~~~~~~~~~~~
 
 1. Run the cookiecutter program with the cookiecutter-pyproj_ template::
 
@@ -81,14 +86,44 @@ machine learning project using the `Iris flower data set`_ in just 2 steps.
     project_description [A short description of the project]: Iris is a machine learning project to classify iris flowers using the Iris flower data set.
     date [2019-08-15]: <Enter>
 
-Now, the Data Scientist can view the contents of the template project::
+Now, project template is complete and the Data Scientist can view and start
+editing the contents of the template project::
 
     $ tree iris
 
 .. image:: images/project-tree.png
     :alt: Screenshot of template project using tree command
 
-and, run tests using top-level Makefile::
+Running analysis, model, etc.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The Data Scientist can run analysis, model, etc. using top-level Makefile::
+
+   $ cd iris
+   $ make analysis
+
+.. image:: images/make-analysis.png
+    :alt: Screenshot of make analysis output
+
+or, run analysis using python directly::
+
+   $ cd iris
+   $ python iris.py
+
+.. image:: images/python-analysis.png
+    :alt: Screenshot of python analysis output
+
+or, run analysis using Click_ command line interface directly::
+
+   $ cd iris
+   $ python cli.py --verbose
+
+.. image:: images/click-analysis.png
+    :alt: Screenshot of click analysis output
+
+
+Running tests
+~~~~~~~~~~~~~
+The Data Scientist can run tests using top-level Makefile::
 
    $ cd iris
    $ make tests
@@ -101,11 +136,14 @@ or, run tests using pytest_ directly::
 .. image:: images/pytest-output.png
     :alt: Screenshot of pytest output
 
-and, make the projects website and code documentation using top-level Makefile::
+
+Generate project documentation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The Data Scientist can make the project website and code documentation using top-level Makefile::
 
    $ make docs
 
-or, make the projects website and code documentation using Sphinx directory::
+or, make the project website and code documentation using Sphinx directory::
 
    $ cd docs
    $ make html
@@ -132,7 +170,6 @@ Screenshot of an example Jupyter notebook plotting the iris data set embedded in
 .. image:: images/project-documentation-iris-plot.png
     :alt: Screenshot of an example jupyter notebook from project documentation
 
-
 | With the boilerplate project framework and structure already finished,
 | the Data Scientist can now start doing data science, the fun part!
 
@@ -155,6 +192,7 @@ Acknowledgements
 Thank you Cookiecutter_!
 
 
+.. _Best Practices in Scientific Computing: https://doi.org/10.1371/journal.pbio.1001745
 .. _Cookiecutter: https://github.com/cookiecutter/cookiecutter
 .. _Click: https://click.palletsprojects.com/en/7.x/
 .. _Python: https://www.python.org/

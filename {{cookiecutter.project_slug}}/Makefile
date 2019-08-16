@@ -1,4 +1,4 @@
-.PHONY: clean clean-pyc clean-tests docs tests
+.PHONY: clean clean-pyc clean-tests docs tests analysis
 
 define BROWSER_PYTHONSCRIPT
 import os
@@ -20,6 +20,7 @@ help:
 	@echo "make clean: remove all Python artifacts and pytest artifacts"
 	@echo "make docs: make Sphinx html documentation"
 	@echo "make tests: run tests with pytest"
+	@echo "make analysis: run analysis, models, main script, etc."
 
 clean: clean-pyc clean-tests
 
@@ -39,3 +40,8 @@ tests:
 
 install: clean
 	python setup.py install
+
+analysis:
+	@echo "Running analysis:"
+	python {{ cookiecutter.project_slug }}/{{ cookiecutter.project_slug }}.py
+	@echo ""
