@@ -22,7 +22,7 @@ def main(verbose):
     Run all analysis, models, and/or main script from a command line interface.
     """
     click.echo("Running analysis from a Click command line interface")
-    iris.main()
+    {{cookiecutter.project_slug}}.main()
     click.echo("Click allows you to easily add various commands and options "
                "as you see fit.")
     click.echo()

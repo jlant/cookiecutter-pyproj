@@ -2,8 +2,8 @@ Changelog
 =========
 
 
-{{ cookiecutter.date }}  {{ cookiecutter.author }} <{{ cookiecutter.email }}>
------------------------------------------------------------------------------
+{{ cookiecutter.date }}
+-----------------------
 
 - Project kickoff
 
