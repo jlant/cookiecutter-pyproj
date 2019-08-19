@@ -9,36 +9,39 @@ Overview
 TODO: Add overview of project.
 
 
-The following is the structure of the Python_ project::
+Project Layout
+--------------
+The following is the layout of the project along with a description of its contents::
 
-    ├── {{cookiecutter.project_slug}}               Source code directory. {{cookiecutter.project_slug}} is 
-    │                                               replaced with `project_slug` used in cookiecutter prompt
-    │   ├── __init__.py                             Makes project a Python package
-    │   ├── {{cookiecutter.project_slug}}.py        Main project module.
-    │   └── cli.py                                  Command line interface using Click
-    │
-    ├── data                                        Original (raw) and final (processed) data sets
-    │   └── readme-dataset.txt                      Template "readme.txt" style for metadata, replace "dataset"
-    │                                               with name of dataset
-    │
-    ├── docs                                        Project and code documentation with Sphinx
-    │   └── _static                                 Sphinx directory for used for styling and images
-    │                                               Contains files to document project analysis and changes
-    │   └── notebooks                               Jupyter notebooks used for data exploration and computational narrative
-    │       └── 01-exploratory-analysis.ipynb       Initial notebook for data exploration
-    │   └── *.rst                                   Various restructured text files linked together in `index.rst`
-    │
-    ├── tests                                       Tests for source code for use with pytest
-    │   ├── __init__.py                             Makes tests directory a Python package for use with fixtures
-    │   └── test_{{cookiecutter.project_slug}}.py   Sample test file for main project module
-    │
-    ├── .gitignore
-    ├── AUTHORS.md
-    ├── Makefile                                    Makefile, list commands with `make help`
-    ├── LICENSE                                     A sample MIT License, change as you like
-    ├── README.md                                   README for the project
-    ├── requirements.txt                            The requirements file for reproducing the Python analysis environment
-    ├── setup.py                                    Python installation file
+   |-- AUTHORS.rst                                 List of authors working on the project
+   |-- Makefile                                    Top-level Makefile, list commands with `make help`
+   |-- README.rst                                  Project README
+   |-- data                                        Directory for raw and processed data with corresponding metadata
+   |-- docs                                        Directory for project and code documentation using Sphinx
+   |   |-- Makefile                                Sphinx Makefile
+   |   |-- _static                                 Directory for project website styles and project images/figures
+   |   |-- analysis.rst                            File to describe detailed project analysis
+   |   |-- authors.rst                             Copy of AUTHORS.rst from top-level directory
+   |   |-- changelog.rst                           List of dated notes about project changes
+   |   |-- code.rst                                File to automatically document your code docstrings
+   |   |-- conf.py                                 Sphinx configuration file
+   |   |-- index.rst                               Main project documentation page, links all documentation *.rst files
+   |   |-- install.rst                             File to describe how to install project requirements
+   |   |-- make.bat                                Sphinx make.bat file
+   |   |-- notebooks                               Directory containing Jupyter notebooks used for data exploration and communicating a computational narrative
+   |   |   `-- 01-exploratory-analysis.ipynb       Sample first Jupyter notebook on project exploratory analysis, can use 01-*, 02-*, ... for logical ordering
+   |   |-- notebooks.rst                           File to list Jupyter notebooks contained in `notebooks` directory for proper linking in project documentation
+   |   `-- overview.rst                            File to provide a high-level overview of the project
+   |-- <project_name>                              Directory for project source code
+   |   |-- __init__.py                             Python file to make source code directory a Python package
+   |   |-- cli.py                                  Command line interface file using Click
+   |   `-- <project_name>.py                       Main project module
+   |-- requirements.txt                            List of project requirements to reproduce project environment
+   |-- setup.py                                    Python installation file, used if project source code is to be installed on another machine
+   `-- tests                                       Directory for all tests of source code using pytest (as default)
+       |-- __init__.py                             Python file to make tests directory a Python package
+       `-- test_<project_name>.py                  Sample test file for source code
+
 
 
 

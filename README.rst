@@ -31,7 +31,7 @@ URL of this cookiecutter-pyproj_ template project::
 After running the command above, you will be prompted to answer a few questions about your project.  Next, your
 project template will be created in your current working directory.
 
-The followings is a sample project layout along with a description of all the contents::
+The following is a sample project layout along with a description of all the contents::
 
    |-- AUTHORS.rst                                 List of authors working on the project
    |-- Makefile                                    Top-level Makefile, list commands with `make help`
