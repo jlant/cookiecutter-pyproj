@@ -1,6 +1,1 @@
-Changelog
-=========
-
-{{ cookiecutter.date }}
------------------------
-- Project start
+.. include:: ../CHANGELOG.rst
