@@ -23,7 +23,7 @@ setup(
     description="{{ cookiecutter.project_description }}",
     entry_points={
         "console_scripts": [
-            "{{ cookiecutter.project_slug }}={{ cookiecutter.project_slug }}.cli.main",
+            "{{ cookiecutter.project_slug }}={{ cookiecutter.project_slug }}.cli:main",
         ],
     },
     include_package_data=True,
